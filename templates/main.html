@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Services</title>
+</head>
+<body>
+    <h1>Welcome to Our Bank Services</h1>
+    <img src="https://img.freepik.com/free-photo/technology-company-room-scene-abstract_1127-2841.jpg?size=626&ext=jpg&ga=GA1.1.2102582543.1716711048&semt=ais_user" alt="Bank Image">
+    
+    <h3>How can we assist you today?</h3>
+    <form action="/service" method="post">
+        <p>Please select your inquiry:</p>
+        <select name="service">
+            <option value="personal">Personal Banking Service</option>
+            <option value="corporate">Corporate Banking Service</option>
+            <option value="cash">Cash-related Service</option>
+            <option value="other">Other Services</option>
+        </select>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+
+    <h3>Do you need a chatbox to support you?</h3>
+    <form action="/chatbox" method="post">
+        <p><input type="text" name="q" placeholder="Enter your response"></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+
+    <h3>Is there anything else we can assist you with?</h3>
+    <form action="/service" method="post">
+        <p><input type="text" name="q" placeholder="Enter your response"></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+
+    <h3>Would you like to report:</h3>
+    <ul>
+        <li><a href="/complain">Complaint</a></li>
+        <li><a href="/scammer_report">Scammer Report</a></li>
+        <li><a href="/fault_or_lost">Fault or Lost</a></li>
+    </ul>
+</body>
+</html>
+"""
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint</title>
+</head>
+<body>
+    <h3>Complaint</h3>
+    <p>Please use the form below to submit your complaint:</p>
+    <form action="/submit_complaint" method="post">
+        <p><textarea name="complaint" rows="4" cols="50" placeholder="Enter your complaint"></textarea></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+</body>
+</html>
+"""
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scammer Report</title>
+</head>
+<body>
+    <h3>Scammer Report</h3>
+    <p>Please use the form below to submit your scammer report:</p>
+    <form action="/submit_scammer_report" method="post">
+        <p><textarea name="report" rows="4" cols="50" placeholder="Enter your scammer report"></textarea></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+</body>
+</html>
+"""
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fault or Lost</title>
+</head>
+<body>
+    <h3>Fault or Lost</h3>
+    <p>Please use the form below to report a fault or lost item:</p>
+    <form action="/submit_fault_or_lost" method="post">
+        <p><textarea name="report" rows="4" cols="50" placeholder="Enter your fault or lost report"></textarea></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+</body>
+</html>
+"""
+
+# Display the main page
+display(HTML(main_html_content))
+
+# Display the complaint page
+display(HTML(complaint_html_content))
+
+# Display the scammer report page
+display(HTML(scammer_report_html_content))
+
+# Display the fault or lost report page
+display(HTML(fault_or_lost_html_content))
